@@ -51,11 +51,6 @@ def _read_docx(data: bytes) -> str:
 
 
 def extract_fields(resume_text: str) -> dict:
-    """
-    Run the LLM to pull structured fields out of the raw resume text.
-    Falls back to a regex-only extraction when no LLM key is configured -
-    useful for local dev without API keys.
-    """
     provider = get_llm_provider()
     if not provider:
         return _regex_fallback(resume_text)

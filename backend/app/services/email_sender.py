@@ -1,12 +1,3 @@
-"""
-Email transport. Two options - whichever is configured wins.
-  1. SMTP (e.g. Gmail) - delivers to any recipient. Preferred.
-  2. Resend - works with their `onboarding@resend.dev` sender only when the
-     recipient matches the Resend account email, unless a domain is verified.
-
-If neither is configured, the caller stores the request with status='logged'
-and that's all.
-"""
 import smtplib
 import ssl
 from email.message import EmailMessage

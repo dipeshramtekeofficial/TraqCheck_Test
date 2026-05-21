@@ -1,13 +1,3 @@
-"""
-AI agent that, given a candidate profile, drafts a personalized email
-requesting PAN and Aadhaar for background verification.
-
-We expose two tools to the LLM:
-  - draft_message: compose the subject + body
-  - log_request:   persist the recipient (this is the "send" stand-in)
-
-In a real system `log_request` would be replaced by the email-provider call.
-"""
 import json
 from typing import Optional, Dict, Any
 
